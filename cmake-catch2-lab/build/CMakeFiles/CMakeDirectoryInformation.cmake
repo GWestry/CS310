@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "C:/Users/gwest/CS310_regular/cmake-catch2-lab")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build-mingw")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

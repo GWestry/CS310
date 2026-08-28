@@ -1,0 +1,3 @@
+C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/CMakeFiles/MathApp.dir
+C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/CMakeFiles/edit_cache.dir
+C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/CMakeFiles/rebuild_cache.dir
