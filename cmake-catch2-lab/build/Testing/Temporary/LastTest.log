@@ -1,0 +1,43 @@
+Start testing: Aug 27 21:00 Eastern Daylight Time
+----------------------------------------------------------
+1/2 Testing: Square root of positive numbers
+1/2 Test: Square root of positive numbers
+Command: "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe" "Square root of positive numbers"
+Directory: C:/Users/gwest/CS310_regular/cmake-catch2-lab/build
+"Square root of positive numbers" start time: Aug 27 21:00 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Filters: "Square root of positive numbers"
+Randomness seeded to: 750638419
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"Square root of positive numbers" end time: Aug 27 21:00 Eastern Daylight Time
+"Square root of positive numbers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: Square root of negative numbers
+2/2 Test: Square root of negative numbers
+Command: "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe" "Square root of negative numbers"
+Directory: C:/Users/gwest/CS310_regular/cmake-catch2-lab/build
+"Square root of negative numbers" start time: Aug 27 21:00 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Filters: "Square root of negative numbers"
+Randomness seeded to: 4149979535
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"Square root of negative numbers" end time: Aug 27 21:00 Eastern Daylight Time
+"Square root of negative numbers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 27 21:00 Eastern Daylight Time
