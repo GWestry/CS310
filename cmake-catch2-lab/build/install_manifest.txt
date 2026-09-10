@@ -1,0 +1,1 @@
+C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/_CPack_Packages/win64/ZIP/MathApp-1.0-win64/bin/MathApp.exe

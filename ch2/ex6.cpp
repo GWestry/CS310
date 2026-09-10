@@ -52,6 +52,22 @@ class Manager : public Employee{
             cout << "Manager constructor!" << endl;
         }
 };
+
+class TaskManager {
+    
+    public:
+        void assignTask(string taskName){
+            cout << "Assigned " << taskName << endl;
+        }
+
+        void assignTask(string taskName, int priority){
+            cout << "Assigned " << taskName << "(Priority: " << priority << ")" << endl;
+        }
+
+        void assignTask(string taskName, int priority, string deadline){
+            cout << "Assigned " << taskName << "(Priority: " << priority << ")" << ", Due: " << deadline << endl;
+        }
+};
 int main(){
 
     // Person employee("Alice", 30);
@@ -64,6 +80,13 @@ int main(){
     // staff.work();
     // staff.display();
 
-    Manager lead;
+    //Manager lead;
+
+    TaskManager tm;
+
+    tm.assignTask("Monthly Report");
+    tm.assignTask("Weekly Report", 1);
+    tm.assignTask("Annual Budget", 5, "End of Week");
+
     return 0;
 }

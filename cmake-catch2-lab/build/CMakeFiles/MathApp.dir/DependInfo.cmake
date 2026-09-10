@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/gwest/CS310_regular/cmake-catch2-lab/src/main.cpp" "CMakeFiles/MathApp.dir/src/main.cpp.obj" "gcc" "CMakeFiles/MathApp.dir/src/main.cpp.obj.d"
-  "C:/Users/gwest/CS310_regular/cmake-catch2-lab/src/math_functions.cpp" "CMakeFiles/MathApp.dir/src/math_functions.cpp.obj" "gcc" "CMakeFiles/MathApp.dir/src/math_functions.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

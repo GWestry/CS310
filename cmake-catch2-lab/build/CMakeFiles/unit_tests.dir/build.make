@@ -86,38 +86,22 @@ CMakeFiles/unit_tests.dir/tests/math_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/tests/math_tests.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gwest\CS310_regular\cmake-catch2-lab\tests\math_tests.cpp -o CMakeFiles\unit_tests.dir\tests\math_tests.cpp.s
 
-CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj: CMakeFiles/unit_tests.dir/flags.make
-CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj: CMakeFiles/unit_tests.dir/includes_CXX.rsp
-CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj: C:/Users/gwest/CS310_regular/cmake-catch2-lab/src/math_functions.cpp
-CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj: CMakeFiles/unit_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\gwest\CS310_regular\cmake-catch2-lab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj -MF CMakeFiles\unit_tests.dir\src\math_functions.cpp.obj.d -o CMakeFiles\unit_tests.dir\src\math_functions.cpp.obj -c C:\Users\gwest\CS310_regular\cmake-catch2-lab\src\math_functions.cpp
-
-CMakeFiles/unit_tests.dir/src/math_functions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/src/math_functions.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gwest\CS310_regular\cmake-catch2-lab\src\math_functions.cpp > CMakeFiles\unit_tests.dir\src\math_functions.cpp.i
-
-CMakeFiles/unit_tests.dir/src/math_functions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/src/math_functions.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gwest\CS310_regular\cmake-catch2-lab\src\math_functions.cpp -o CMakeFiles\unit_tests.dir\src\math_functions.cpp.s
-
 # Object files for target unit_tests
 unit_tests_OBJECTS = \
-"CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj" \
-"CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj"
+"CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj"
 
 # External object files for target unit_tests
 unit_tests_EXTERNAL_OBJECTS =
 
 unit_tests.exe: CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj
-unit_tests.exe: CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj
 unit_tests.exe: CMakeFiles/unit_tests.dir/build.make
+unit_tests.exe: libMathLib.a
 unit_tests.exe: _deps/catch2-build/src/libCatch2Main.a
 unit_tests.exe: _deps/catch2-build/src/libCatch2.a
 unit_tests.exe: CMakeFiles/unit_tests.dir/linkLibs.rsp
 unit_tests.exe: CMakeFiles/unit_tests.dir/objects1.rsp
 unit_tests.exe: CMakeFiles/unit_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\gwest\CS310_regular\cmake-catch2-lab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable unit_tests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\gwest\CS310_regular\cmake-catch2-lab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable unit_tests.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\unit_tests.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=unit_tests -D TEST_EXECUTABLE=C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/gwest/CS310_regular/cmake-catch2-lab/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=unit_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests-b12d07c_tests.cmake -P C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/_deps/catch2-src/extras/CatchAddTests.cmake
 

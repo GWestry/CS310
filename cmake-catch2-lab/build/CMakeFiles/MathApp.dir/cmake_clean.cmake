@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MathApp.dir/src/main.cpp.obj"
   "CMakeFiles/MathApp.dir/src/main.cpp.obj.d"
-  "CMakeFiles/MathApp.dir/src/math_functions.cpp.obj"
-  "CMakeFiles/MathApp.dir/src/math_functions.cpp.obj.d"
   "MathApp.exe"
   "MathApp.exe.manifest"
   "MathApp.pdb"

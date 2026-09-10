@@ -1,34 +1,54 @@
-Start testing: Aug 27 21:00 Eastern Daylight Time
+Start testing: Sep 08 22:00 Eastern Daylight Time
 ----------------------------------------------------------
-1/2 Testing: Square root of positive numbers
-1/2 Test: Square root of positive numbers
+1/4 Testing: Square root of positive numbers
+1/4 Test: Square root of positive numbers
 Command: "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe" "Square root of positive numbers"
 Directory: C:/Users/gwest/CS310_regular/cmake-catch2-lab/build
-"Square root of positive numbers" start time: Aug 27 21:00 Eastern Daylight Time
+"Square root of positive numbers" start time: Sep 08 22:00 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Square root of positive numbers"
-Randomness seeded to: 750638419
+Randomness seeded to: 3507579657
 ===============================================================================
 All tests passed (2 assertions in 1 test case)
 
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"Square root of positive numbers" end time: Aug 27 21:00 Eastern Daylight Time
+"Square root of positive numbers" end time: Sep 08 22:00 Eastern Daylight Time
 "Square root of positive numbers" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/2 Testing: Square root of negative numbers
-2/2 Test: Square root of negative numbers
+2/4 Testing: Square root of negative numbers
+2/4 Test: Square root of negative numbers
 Command: "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe" "Square root of negative numbers"
 Directory: C:/Users/gwest/CS310_regular/cmake-catch2-lab/build
-"Square root of negative numbers" start time: Aug 27 21:00 Eastern Daylight Time
+"Square root of negative numbers" start time: Sep 08 22:00 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Square root of negative numbers"
-Randomness seeded to: 4149979535
+Randomness seeded to: 3593227743
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"Square root of negative numbers" end time: Sep 08 22:00 Eastern Daylight Time
+"Square root of negative numbers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: Square root of non-perfect square
+3/4 Test: Square root of non-perfect square
+Command: "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe" "Square root of non-perfect square"
+Directory: C:/Users/gwest/CS310_regular/cmake-catch2-lab/build
+"Square root of non-perfect square" start time: Sep 08 22:00 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Filters: "Square root of non-perfect square"
+Randomness seeded to: 3042881239
 ===============================================================================
 All tests passed (1 assertion in 1 test case)
 
@@ -36,8 +56,28 @@ All tests passed (1 assertion in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Square root of negative numbers" end time: Aug 27 21:00 Eastern Daylight Time
-"Square root of negative numbers" time elapsed: 00:00:00
+"Square root of non-perfect square" end time: Sep 08 22:00 Eastern Daylight Time
+"Square root of non-perfect square" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 27 21:00 Eastern Daylight Time
+4/4 Testing: Square root of negative numbers throws exception
+4/4 Test: Square root of negative numbers throws exception
+Command: "C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/unit_tests.exe" "Square root of negative numbers throws exception"
+Directory: C:/Users/gwest/CS310_regular/cmake-catch2-lab/build
+"Square root of negative numbers throws exception" start time: Sep 08 22:00 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Filters: "Square root of negative numbers throws exception"
+Randomness seeded to: 648395016
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"Square root of negative numbers throws exception" end time: Sep 08 22:00 Eastern Daylight Time
+"Square root of negative numbers throws exception" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 08 22:00 Eastern Daylight Time

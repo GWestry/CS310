@@ -192,4 +192,5 @@ CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj: \
  C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/_deps/catch2-src/src/catch2/internal/catch_test_registry.hpp \
  C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_test_invoker.hpp \
  C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/_deps/catch2-src/src/catch2/internal/catch_preprocessor_remove_parens.hpp \
+ C:/Users/gwest/CS310_regular/cmake-catch2-lab/build/_deps/catch2-src/src/catch2/catch_approx.hpp \
  C:/Users/gwest/CS310_regular/cmake-catch2-lab/include/math_functions.h

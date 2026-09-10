@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/gwest/CS310_regular/cmake-catch2-lab/src/math_functions.cpp" "CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj" "gcc" "CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj.d"
   "C:/Users/gwest/CS310_regular/cmake-catch2-lab/tests/math_tests.cpp" "CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj" "gcc" "CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj.d"
   )
 

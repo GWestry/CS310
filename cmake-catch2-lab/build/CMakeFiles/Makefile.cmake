@@ -18,6 +18,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake"
+  "C:/Program Files/CMake/share/cmake-4.4/Modules/CPack.cmake"
+  "C:/Program Files/CMake/share/cmake-4.4/Modules/CPackComponent.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/CTest.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/CTestTargets.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/CTestUseLaunchers.cmake"
@@ -53,6 +55,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/WriteBasicConfigVersionFile.cmake"
+  "C:/Program Files/CMake/share/cmake-4.4/Templates/CPackConfig.cmake.in"
   "C:/Program Files/CMake/share/cmake-4.4/Templates/CTestScript.cmake.in"
   "C:/Users/gwest/CS310_regular/cmake-catch2-lab/CMakeLists.txt"
   "CMakeFiles/4.4.2/CMakeCXXCompiler.cmake"
@@ -77,6 +80,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/catch2-subbuild/CMakeLists.txt"
   "DartConfiguration.tcl"
   "CMakeFiles/CTestScript.cmake"
+  "CPackConfig.cmake"
+  "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/catch2-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/catch2-build/generated-includes/catch2/catch_user_config.hpp"
@@ -85,6 +90,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/MathLib.dir/DependInfo.cmake"
   "CMakeFiles/MathApp.dir/DependInfo.cmake"
   "CMakeFiles/unit_tests.dir/DependInfo.cmake"
   "CMakeFiles/Experimental.dir/DependInfo.cmake"

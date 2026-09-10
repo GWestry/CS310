@@ -1,3 +1,5 @@
-Square root of positive numbers 2 0.0199685
-Square root of negative numbers 2 0.0111682
+Square root of positive numbers 3 0.0100614
+Square root of negative numbers 3 0.0097952
+Square root of non-perfect square 1 0.0229001
+Square root of negative numbers throws exception 1 0.0249657
 ---

@@ -10,10 +10,16 @@ TEST_CASE("Square root of positive numbers", "[math]")
 
 TEST_CASE("Square root of negative numbers", "[math]")
 {
-    REQUIRE(compute_square_root(-1.0) == -1.0); // Error
+    REQUIRE_THROWS(compute_square_root(-1.0));
 }
 
 TEST_CASE("Square root of non-perfect square")
 {
-    REQUIRE(compute_square_root(2.0) == Catch::Approx(1.41421356237).epsilon(0.001));
+    REQUIRE(compute_square_root(2.0) ==
+            Catch::Approx(1.41421356237).epsilon(0.001));
+}
+
+TEST_CASE("Square root of negative numbers throws exception", "[math]")
+{
+    REQUIRE_THROWS(compute_square_root(-1.0));
 }

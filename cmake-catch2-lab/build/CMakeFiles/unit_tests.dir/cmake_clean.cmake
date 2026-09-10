@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj"
-  "CMakeFiles/unit_tests.dir/src/math_functions.cpp.obj.d"
   "CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj"
   "CMakeFiles/unit_tests.dir/tests/math_tests.cpp.obj.d"
   "libunit_tests.dll.a"

@@ -1,13 +1,17 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(MathLibProject VERSION 1.0 LANGUAGES CXX)
+project(MathApp VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(MathApp src/main.cpp src/math_functions.cpp)
+# create the static library
+add_library(MathLib STATIC src/math_functions.cpp)
+target_include_directories(MathLib PUBLIC include)
 
-target_include_directories(MathApp PUBLIC include)
+# link MathApp to the library
+add_executable(MathApp src/main.cpp)
+target_link_libraries(MathApp PRIVATE MathLib)
 
 #Enable testing
 enable_testing()
@@ -22,10 +26,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 #Add test executable
-add_executable(unit_tests tests/math_tests.cpp
-src/math_functions.cpp)
-target_link_libraries(unit_tests PRIVATE
-Catch2::Catch2WithMain)
+add_executable(unit_tests tests/math_tests.cpp)
+target_link_libraries(unit_tests PRIVATE MathLib Catch2::Catch2WithMain)
 target_include_directories(unit_tests PUBLIC include)
 
 #Discover and add tests to CTest
@@ -34,3 +36,6 @@ include(CTest)
 include(Catch)
 catch_discover_tests(unit_tests)
 
+install(TARGETS MathApp DESTINATION bin)
+set(CPACK_GENERATOR "ZIP")
+include(CPack)
