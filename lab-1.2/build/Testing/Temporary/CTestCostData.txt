@@ -1,0 +1,54 @@
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+JSON 0 0
+JSON 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+JSON 0 0
+JSON 0 0
+Polymorphic 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+JSON 0 0
+JSON 0 0
+Polymorphic 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+JSON 0 0
+JSON 0 0
+Polymorphic 0 0
+Student 0 0
+Instructor 0 0
+CSV 0 0
+Validation 0 0
+JSON 0 0
+JSON 0 0
+Polymorphic 0 0
+Student JSON serialization 1 0.00432759
+Instructor YAML serialization 1 0.00442117
+CSV escaping handles commas and quotes 1 0.0041479
+Validation throws on bad email 1 0.0037693
+JSON round-trips back to the original objects 1 0.00529992
+JSON parsing rejects invalid input 1 0.00353788
+Polymorphic CSV uses a stable superset header 1 0.003965
+---

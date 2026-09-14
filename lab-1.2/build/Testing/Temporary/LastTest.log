@@ -1,0 +1,143 @@
+Start testing: Sep 14 01:41 UTC
+----------------------------------------------------------
+1/7 Testing: Student JSON serialization
+1/7 Test: Student JSON serialization
+Command: "/workspaces/CS310/lab-1.2/build/tests" "Student JSON serialization"
+Directory: /workspaces/CS310/lab-1.2/build
+"Student JSON serialization" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "Student JSON serialization"
+Randomness seeded to: 1176926028
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Student JSON serialization" end time: Sep 14 01:41 UTC
+"Student JSON serialization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: Instructor YAML serialization
+2/7 Test: Instructor YAML serialization
+Command: "/workspaces/CS310/lab-1.2/build/tests" "Instructor YAML serialization"
+Directory: /workspaces/CS310/lab-1.2/build
+"Instructor YAML serialization" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "Instructor YAML serialization"
+Randomness seeded to: 1712442860
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Instructor YAML serialization" end time: Sep 14 01:41 UTC
+"Instructor YAML serialization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: CSV escaping handles commas and quotes
+3/7 Test: CSV escaping handles commas and quotes
+Command: "/workspaces/CS310/lab-1.2/build/tests" "CSV escaping handles commas and quotes"
+Directory: /workspaces/CS310/lab-1.2/build
+"CSV escaping handles commas and quotes" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "CSV escaping handles commas and quotes"
+Randomness seeded to: 2864365553
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CSV escaping handles commas and quotes" end time: Sep 14 01:41 UTC
+"CSV escaping handles commas and quotes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: Validation throws on bad email
+4/7 Test: Validation throws on bad email
+Command: "/workspaces/CS310/lab-1.2/build/tests" "Validation throws on bad email"
+Directory: /workspaces/CS310/lab-1.2/build
+"Validation throws on bad email" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "Validation throws on bad email"
+Randomness seeded to: 3939800970
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Validation throws on bad email" end time: Sep 14 01:41 UTC
+"Validation throws on bad email" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: JSON round-trips back to the original objects
+5/7 Test: JSON round-trips back to the original objects
+Command: "/workspaces/CS310/lab-1.2/build/tests" "JSON round-trips back to the original objects"
+Directory: /workspaces/CS310/lab-1.2/build
+"JSON round-trips back to the original objects" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "JSON round-trips back to the original objects"
+Randomness seeded to: 1194782402
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JSON round-trips back to the original objects" end time: Sep 14 01:41 UTC
+"JSON round-trips back to the original objects" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: JSON parsing rejects invalid input
+6/7 Test: JSON parsing rejects invalid input
+Command: "/workspaces/CS310/lab-1.2/build/tests" "JSON parsing rejects invalid input"
+Directory: /workspaces/CS310/lab-1.2/build
+"JSON parsing rejects invalid input" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "JSON parsing rejects invalid input"
+Randomness seeded to: 3369298932
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"JSON parsing rejects invalid input" end time: Sep 14 01:41 UTC
+"JSON parsing rejects invalid input" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: Polymorphic CSV uses a stable superset header
+7/7 Test: Polymorphic CSV uses a stable superset header
+Command: "/workspaces/CS310/lab-1.2/build/tests" "Polymorphic CSV uses a stable superset header"
+Directory: /workspaces/CS310/lab-1.2/build
+"Polymorphic CSV uses a stable superset header" start time: Sep 14 01:41 UTC
+Output:
+----------------------------------------------------------
+Filters: "Polymorphic CSV uses a stable superset header"
+Randomness seeded to: 1409242428
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Polymorphic CSV uses a stable superset header" end time: Sep 14 01:41 UTC
+"Polymorphic CSV uses a stable superset header" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 14 01:41 UTC
