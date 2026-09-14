@@ -11,7 +11,6 @@ protected:
   std::string email_;
 
   static void validate_email(const std::string& e) {
-    // intentionally simple for the lab; throws on bad input
     static const std::regex re(R"(^[^@\s]+@[^@\s]+\.[^@\s]+$)");
     if (!std::regex_match(e, re)) throw ValidationError("Invalid email: " + e);
   }
@@ -26,7 +25,6 @@ public:
 
   virtual std::string role() const = 0;
 
-  // Accessors for tests
   int id() const { return id_; }
   const std::string& name() const { return name_; }
   const std::string& email() const { return email_; }

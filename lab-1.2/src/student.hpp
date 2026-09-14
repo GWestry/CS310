@@ -7,7 +7,6 @@ class Student : public Person {
   int grad_year_;
   std::vector<std::string> courses_;
 public:
-// JSON roundtrip parsing implementation
   static Student from_json(const nlohmann::json& j) {
     try {
       if (j.at("role") != "Student") {
@@ -59,7 +58,7 @@ public:
   }
 
   std::string csv_header() const override {
-    return "role,id,name,email,grad_year,courses"; // courses joined by ';'
+    return "role,id,name,email,grad_year,courses";
   }
 
   std::string csv_row() const override {

@@ -58,7 +58,7 @@ public:
   }
 
   std::string csv_header() const override {
-    return "role,id,name,email,office,teaches"; // teaches joined by ';'
+    return "role,id,name,email,office,teaches";
   }
 
   std::string csv_row() const override {
