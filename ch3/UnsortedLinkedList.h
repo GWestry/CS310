@@ -1,63 +1,73 @@
 #include "itemType.h"
 #include <iostream>
+
 using namespace std;
 
-const int MAX_ITEMS = 100;
+struct NodeType
+{
+    ItemType data;
+    NodeType *next = nullptr;
+};
 
-class UnsortedList{
+class UnsortedLinkedList
+{
+private:
+    NodeType* head;
+    int length;
+    NodeType* currPos;
 
-    private:
-        ItemType *data;
-        int length;
-        int currPos;
-        int capacity;
+public:
+
+    UnsortedLinkedList::UnsortedLinkedList()
+        : head(nullptr), length(0), currPos(nullptr) {
+          };
     
-    public:
-        UnsortedList(): length(0), currPos(-1){
-             capacity = MAX_ITEMS;
-             data = new ItemType[capacity];
+    ~UnsortedLinkedList()
+    {
+        NodeType* temp;
+        while(head != nullptr){
+            temp = head;
+            head = head->next;
+            delete temp;
         }
-
-        ~UnsortedList(){
-            delete[] data;
-        }
-
-        UnsortedList(int c){
-            capacity = c;
-            length = 0;
-            currPos = -1;
-            data = new ItemType[capacity];
-        }
-
-        bool IsFull() const{
-            return length == MAX_ITEMS;
-        }
-
-        int Length()const{
-            return length;
-        }
-
-        void PutItem(ItemType item){
-            if (!IsFull()){
-                //data[length++] = item;
-                //expanded version below
-                data[length] = item;
-                length++;
-            }
-        }
-
-        void DeleteItem(ItemType item){
-            for (int i = 0; i < length; i++){
-                if(data[i].CompareTo(item) == 0){
-                    data[i] = data[--length];
-                    return;
-                }
-            }
-        }
-
-        void Display(){
-            for (int i = 0; i < length; i++){
-            cout << "List["<<(i+1)<<"]: " << data[i].key << endl;
     }
+    void PutItem(ItemType item)
+    {
+        NodeType *newNode = new NodeType;
+        newNode->data = item;
+        newNode->next = head;
+        head = newNode;
+        length++;
+    }
+
+    void DeleteItem(ItemType item){
+        //search/find the items location
+
+        NodeType* targetNode = head;
+        NodeType* tempLocation;
+        //if we are deleting first node
+        if(targetNode != nullptr && targetNode->data.CompareTo(item) == 0){
+            tempLocation = targetNode;
+            head = head->next;
+        }else{
+            //if we are deleting a node in the middle/end
+            while(targetNode!=nullptr && 
+                targetNode->next != nullptr
+                && targetNode->next->data.CompareTo(item) != 0){
+                    targetNode = targetNode->next;
+                }
+            
+            if(targetNode!=nullptr && targetNode->next!= nullptr){
+                tempLocation = targetNode->next;
+                targetNode->next = tempLocation->next;
+            }else{
+                return;
+            }
+
+            delete tempLocation;
+            return;
+
         }
+        //remove from the list
+    }
 };

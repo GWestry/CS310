@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/cmake_install.cmake",
+		"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/json-build/cmake_install.cmake",
+		"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/yaml-cpp-build/cmake_install.cmake",
+		"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/yaml-cpp-build/util/cmake_install.cmake",
+		"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/catch2-build/cmake_install.cmake",
+		"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/catch2-build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

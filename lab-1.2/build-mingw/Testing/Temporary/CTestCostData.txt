@@ -1,0 +1,8 @@
+Student JSON serialization 2 0.0312458
+Instructor YAML serialization 2 0.0178765
+CSV escaping handles commas and quotes 2 0.0142499
+Validation throws on bad email 2 0.0115955
+JSON round-trips back to the original objects 2 0.012544
+JSON parsing rejects invalid input 2 0.0124392
+Polymorphic CSV uses a stable superset header 2 0.0125333
+---

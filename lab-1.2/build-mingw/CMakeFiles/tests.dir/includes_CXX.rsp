@@ -1,0 +1,1 @@
+-I"C:/Users/gwest/CS310_regular/lab-1.2/src" -I"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/json-src/include" -I"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/yaml-cpp-src/include" -I"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/catch2-src/src/catch2/.." -I"C:/Users/gwest/CS310_regular/lab-1.2/build-mingw/_deps/catch2-build/generated-includes"
