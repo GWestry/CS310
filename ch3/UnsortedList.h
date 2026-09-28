@@ -7,12 +7,21 @@ const int MAX_ITEMS = 100;
 class UnsortedList{
 
     private:
-        ItemType data[MAX_ITEMS];
+        ItemType *data;
         int length;
         int currPos;
+        int capacity;
     
     public:
-        UnsortedList(): length(0), currPos(-1){}
+        UnsortedList(): length(0), currPos(-1)
+        {
+            capacity = MAX_ITEMS;
+            data = new ItemType[capacity];
+        }
+
+        ~UnsortedList(){
+            delete[] data;
+        }
 
         bool IsFull() const{
             return length == MAX_ITEMS;
