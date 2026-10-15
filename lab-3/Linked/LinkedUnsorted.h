@@ -68,7 +68,11 @@ public:
   // Post: Current position is updated to next position.
   //       item is a copy of element at current position.
 
-ItemType Head(){};
+  // Post: Returns the last item inserted in the list. O(1).
+  ItemType Head() const;
+
+  // Post: Returns a new list with the last item inserted removed. O(n).
+  UnsortedType Tail() const;
 
 private:
   NodeType *listData;

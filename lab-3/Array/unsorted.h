@@ -1,24 +1,24 @@
-#include "ItemType.h" 
-// File ItemType.h must be provided by the user of this class. 
-//  ItemType.h must contain the following definitions: 
-//  MAX_ITEMS:     the maximum number of items on the list 
-//  ItemType:      the definition of the objects on the list 
+#include "ItemType.h"
+// File ItemType.h must be provided by the user of this class.
+//  ItemType.h must contain the following definitions:
+//  MAX_ITEMS:     the maximum number of items on the list
+//  ItemType:      the definition of the objects on the list
 //  RelationType:  {LESS, GREATER, EQUAL}
-//  Member function ComparedTo(ItemType item) which returns 
-//       LESS, if self "comes before" item 
-//       GREATER, if self "comes after" item 
-//       EQUAL, if self and item are the same 
+//  Member function ComparedTo(ItemType item) which returns
+//       LESS, if self "comes before" item
+//       GREATER, if self "comes after" item
+//       EQUAL, if self and item are the same
 
-class UnsortedType 
+class UnsortedType
 {
 public:
   UnsortedType();
   // Constructor
-  
+
   void MakeEmpty();
   // Function: Returns the list to the empty state.
   // Post:  List is empty.
-  
+
   bool IsFull() const;
   // Function:  Determines whether list is full.
   // Pre:  List has been initialized.
@@ -29,7 +29,7 @@ public:
   // Pre:  List has been initialized.
   // Post: Function value = number of elements in list
 
-  ItemType GetItem(ItemType, bool&);
+  ItemType GetItem(ItemType, bool &);
   // Function: Retrieves list element whose key matches item's key (if
   //           present).
   // Pre:  List has been initialized.
@@ -63,21 +63,18 @@ public:
   // Pre:  List has been initialized and has not been changed since last call.
   //       Current position is defined.
   //       Element at current position is not last in list.
-  //	     
+  //
   // Post: Current position is updated to next position.
   //       item is a copy of element at current position.
 
-  //Post: return the last item of the list
-  ItemType Head(){
-    ItemType item;
-    
+  // Post: Returns the last item inserted in the list. O(1).
+  ItemType Head() const;
 
-    return;
-  }
+  // Post: Returns a new list with the last item inserted removed. O(n).
+  UnsortedType Tail() const;
 
 private:
   int length;
   ItemType info[MAX_ITEMS];
   int currentPos;
 };
-

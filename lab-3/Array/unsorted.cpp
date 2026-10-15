@@ -15,11 +15,11 @@ int UnsortedType::GetLength() const
   return length;
 }
 
-ItemType UnsortedType::GetItem(ItemType item, bool& found) 
-// Pre:  Key member(s) of item is initialized. 
-// Post: If found, item's key matches an element's key in the 
+ItemType UnsortedType::GetItem(ItemType item, bool &found)
+// Pre:  Key member(s) of item is initialized.
+// Post: If found, item's key matches an element's key in the
 //       list and a copy of that element has been returned;
-//       otherwise, item is returned. 
+//       otherwise, item is returned.
 {
   bool moreToSearch;
   int location = 0;
@@ -27,17 +27,19 @@ ItemType UnsortedType::GetItem(ItemType item, bool& found)
 
   moreToSearch = (location < length);
 
-  while (moreToSearch && !found) 
+  while (moreToSearch && !found)
   {
     switch (item.ComparedTo(info[location]))
     {
-      case LESS    : 
-      case GREATER : location++;
-                     moreToSearch = (location < length);
-                     break;
-      case EQUAL   : found = true;
-                     item = info[location];
-                     break;
+    case LESS:
+    case GREATER:
+      location++;
+      moreToSearch = (location < length);
+      break;
+    case EQUAL:
+      found = true;
+      item = info[location];
+      break;
     }
   }
   return item;
@@ -83,10 +85,17 @@ ItemType UnsortedType::GetNextItem()
   return info[currentPos];
 }
 
-ItemType UnsortedType::Head()
-// Post: Returns the first item in the list. If the list is empty, returns a default
+ItemType UnsortedType::Head() const
+// Post: Returns the last item inserted in the list.
 {
-
   return info[length - 1];
 }
 
+UnsortedType UnsortedType::Tail() const
+// Post: Returns a new list with the last item inserted removed.
+{
+  UnsortedType result;
+  for (int index = 0; index < length - 1; index++)
+    result.PutItem(info[index]);
+  return result;
+}

@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+template <typename T, int Capacity>
+class ArrayQueue
+{
+    T *arr;
+    int front = 0;
+    int rear = -1;
+    int count = 0;
+
+public:
+    ArrayQueue()
+    {
+        arr = new T[Capacity];
+    }
+
+    ~ArrayQueue()
+    {
+        delete[] arr;
+    }
+
+    void Enqueue(T value)
+    {
+        if (isFull())
+        {
+            cout << "Queue is full!" << endl;
+            return;
+        }
+        rear = (rear + 1) % Capacity;
+        arr[rear] = value;
+        count++;
+    }
+
+    // check if this typically has a return type
+    T Dequeue()
+    {
+        if (isEmpty())
+        {
+            cout << "Nothing to dequeue" << endl;
+            return;
+        }
+        T temp = front;
+        front = [];
+        count--;
+        return temp;
+    }
+};
+
+int main()
+{
+    ArrayQueue<int, 5> q;
+    q.Enqueue(10);
+    q.Enqueue(20);
+    q.Enqueue(30);
+    q.Enqueue(40);
+    q.Enqueue(50);
+    q.Enqueue(60); // should print queue is full
+
+    return 0;
+}

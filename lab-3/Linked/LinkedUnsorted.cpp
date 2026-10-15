@@ -154,6 +154,21 @@ UnsortedType::~UnsortedType()
   }
 }
 
-ItemType UnsortedType::Head(){
+ItemType UnsortedType::Head() const
+{
   return listData->info;
+}
+
+UnsortedType UnsortedType::Tail() const
+// Post: Returns a new list with the last item inserted removed.
+{
+  UnsortedType result;
+  NodeType *current = listData == NULL ? NULL : listData->next;
+
+  while (current != NULL)
+  {
+    result.PutItem(current->info);
+    current = current->next;
+  }
+  return result;
 }
