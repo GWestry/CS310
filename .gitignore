@@ -1,0 +1,15 @@
+# CMake build output
+**/build/
+**/build-*/
+lab-5-before-stack-extract/
+
+# Compiled files
+*.exe
+*.o
+*.obj
+*.a
+*.dll
+
+# Generated test output
+**/test-output.txt
+**/playlist_test.json

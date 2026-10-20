@@ -1,9 +1,8 @@
 #ifndef SONG_H
 #define SONG_H
 #include <string>
-#include "UnsortedLinkedList.h"
 
-class Song : public ItemType
+class Song
 {
 public:
     std::string title;
