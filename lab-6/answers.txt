@@ -1,0 +1,34 @@
+Exercise 38
+
+1. Class definition
+
+QueueType is a circular array queue with these data members:
+
+- T* data: dynamically allocated array of queue items.
+- int maxQueueSize: maximum number of items.
+- int queueFront: index of the first item.
+- int queueRear: index where the next item will be inserted.
+- int length: current number of items in the queue.
+
+The queue is empty when length is 0 and full when length equals
+maxQueueSize.
+
+2. Member functions
+
+The constructor initializes length to 0.
+Enqueue adds an item and increments length.
+Dequeue removes an item and decrements length.
+IsEmpty checks whether length is 0.
+IsFull checks whether length equals maxQueueSize.
+GetLength returns length.
+
+The circular index updates and destructor work the same as in the previous
+implementation. Enqueue and Dequeue return false instead of changing the
+queue when the operation cannot be completed.
+
+3. Big-O comparison
+
+Both implementations have O(1) time for Enqueue, Dequeue, IsEmpty, and
+IsFull. The new implementation uses one additional integer, length, and can
+use all array positions. The previous implementation reserved one unused
+position to distinguish a full queue from an empty queue.
