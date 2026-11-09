@@ -1,93 +1,91 @@
-// Test driver
-#include <iostream>
 #include <fstream>
+#include <vector>
 
 #include "StackType.h"
 
 using namespace std;
 
-int main()
+namespace
 {
-
-  ifstream inFile;       // file containing operations
-  ofstream outFile;      // file containing output
-  string inFileName;     // input file external name
-  string outFileName;    // output file external name
-  string outputLabel;     
-  string command;        // operation to be executed
-  
-  int item;
-  StackType stack;
-  int numCommands;
-
-
-  // Prompt for file names, read file names, and prepare files
-  cout << "Enter name of input command file; press return." << endl;
-  cin  >> inFileName;
-  inFile.open(inFileName.c_str());
-
-  cout << "Enter name of output file; press return." << endl;
-  cin  >> outFileName;
-  outFile.open(outFileName.c_str());
-
-  cout << "Enter name of test run; press return." << endl;
-  cin  >> outputLabel;
-  outFile << outputLabel << endl;
-
-  inFile >> command;
-
-
-  numCommands = 0;
-  while (command != "Quit")
-  { 
-    try 
-    {
-      if (command == "Push")
-      {
-        inFile >> item; 
-        stack.Push(item);
-      }
-      else if (command == "Pop")
-        stack.Pop();
-      else if (command == "Top")
-      {
-        item = stack.Top(); 
-        outFile<< "Top element is " << item << endl;
-      } 
-      else if (command == "IsEmpty") 
-        if (stack.IsEmpty())
-          outFile << "Stack is empty." << endl;
-        else 
-          outFile << "Stack is not empty." << endl;
-             
-      else if (command == "IsFull")
-        if (stack.IsFull())
-          outFile << "Stack is full." << endl;
-        else outFile << "Stack is not full."  << endl;  
-	  else
-		outFile << command << " not found" << endl;
-
-    }
-    catch (FullStack)
-    {
-      outFile << "FullStack exception thrown." << endl;
-    }
-    
-    catch (EmptyStack)
-    {
-      outFile << "EmtpyStack exception thrown." << endl;
-    }    
-    numCommands++;
-    cout <<  " Command number " << numCommands << " completed." 
-         << endl;
-    inFile >> command;
- 
-  };
- 
-  cout << "Testing completed."  << endl;
-  inFile.close();
-  outFile.close();
-  return 0;
+void CopyStack(StackType& source, StackType& copy)
+{
+  StackType reversed;
+  while (!source.IsEmpty())
+  {
+    ItemType item = source.Top();
+    source.Pop();
+    reversed.Push(item);
+  }
+  while (!reversed.IsEmpty())
+  {
+    ItemType item = reversed.Top();
+    reversed.Pop();
+    source.Push(item);
+    copy.Push(item);
+  }
 }
 
+ItemType BottomAndEmpty(StackType& stack)
+{
+  ItemType bottom = stack.Top();
+  while (!stack.IsEmpty())
+  {
+    bottom = stack.Top();
+    stack.Pop();
+  }
+  return bottom;
+}
 
+ItemType BottomUnchanged(StackType& stack)
+{
+  StackType reversed;
+  while (!stack.IsEmpty())
+  {
+    ItemType item = stack.Top();
+    stack.Pop();
+    reversed.Push(item);
+  }
+  ItemType bottom = reversed.Top();
+  while (!reversed.IsEmpty())
+  {
+    ItemType item = reversed.Top();
+    reversed.Pop();
+    stack.Push(item);
+  }
+  return bottom;
+}
+}
+
+int main()
+{
+  ifstream inFile("StackType.in");
+  ofstream outFile("StackType.out");
+  if (!inFile || !outFile)
+    return 1;
+
+  StackType stack;
+  vector<ItemType> values;
+  ItemType item;
+  while (inFile >> item)
+  {
+    values.push_back(item);
+    stack.Push(item);
+  }
+
+  outFile << "Initial top: " << stack.Top() << '\n';
+  stack.Pop();
+  ItemType secondElement = stack.Top();
+  stack.Pop();
+  outFile << "1. Second element: " << secondElement << '\n';
+
+  outFile << "2. Bottom element: " << BottomAndEmpty(stack) << '\n';
+
+  for (ItemType value : values)
+    stack.Push(value);
+  outFile << "3. Bottom element: " << BottomUnchanged(stack) << '\n';
+
+  StackType copy;
+  CopyStack(stack, copy);
+  outFile << "4. Copy top: " << copy.Top() << '\n';
+  outFile << "Stack top after copy: " << stack.Top() << '\n';
+}
