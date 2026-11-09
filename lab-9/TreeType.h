@@ -34,5 +34,5 @@ private:
   QueType preQue;
   QueType inQue;
   QueType postQue;
-  int LeafCountHelper(TreeNode *node);
+  int LeafCountHelper(TreeNode *node) const;
 };

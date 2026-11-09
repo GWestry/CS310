@@ -346,8 +346,17 @@ int TreeType::LeafCount() const
   return LeafCountHelper(root);
 }
 
-int TreeType::LeafCountHelper(TreeNode *node)
+int TreeType::LeafCountHelper(TreeNode *node) const
 {
+  if (node == nullptr)
+  {
+    return 0;
+  }
 
-  return LeafCountHelper(node->left) + LeafCountHelper(node->right)
+  if (node->left == nullptr && node->right == nullptr)
+  {
+    return 1;
+  }
+
+  return LeafCountHelper(node->left) + LeafCountHelper(node->right);
 }
