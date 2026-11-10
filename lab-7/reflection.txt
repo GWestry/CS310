@@ -1,0 +1,5 @@
+This was an overall simple lab. 
+I used recursion to allow the call to either work to the left or to the right. 
+Setting right to mid - 1 when the target was lower than the middle element and setting left to mid + 1 when the target was greater than the middle element.
+I tested out my function using multiple scenarios of searching for the first element, missing element, last element, middle element and I even worked with one element or empty arrays.
+I usually do BSF in an iterative approach so this was a cool way to learn it recursively.
