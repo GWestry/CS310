@@ -109,7 +109,9 @@ int circularTour(int petrol[], int dist[], int n)
         }
     }
 
-    return currentPetrol + deficit >= 0 ? start : -1;
+    if (currentPetrol + deficit >= 0)
+        return start;
+    return -1;
 }
 
 // 5.5 Fixed-size LRU Cache

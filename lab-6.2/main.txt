@@ -132,8 +132,12 @@ void test1_8()
 void test1_9()
 {
     DLLNode* head = nullptr;
-    std::cout << "1.9 hasCycle: " << (hasCycle(head) ? "true" : "false")
-              << '\n';
+    std::cout << "1.9 hasCycle: ";
+    if (hasCycle(head))
+        std::cout << "true";
+    else
+        std::cout << "false";
+    std::cout << '\n';
 }
 
 // 2.1 Insert at Head
@@ -247,8 +251,12 @@ void test3_3()
 // 3.4 Check Balanced Parentheses
 void test3_4()
 {
-    std::cout << "3.4 balanced: "
-              << (balanced("({[]})") ? "true" : "false") << '\n';
+    std::cout << "3.4 balanced: ";
+    if (balanced("({[]})"))
+        std::cout << "true";
+    else
+        std::cout << "false";
+    std::cout << '\n';
 }
 
 // 3.5 Infix to Postfix and 3.6 Evaluate Postfix
@@ -403,8 +411,12 @@ void test5_6()
 // 5.7 Check Palindrome
 void test5_7()
 {
-    std::cout << "5.7 palindrome: "
-              << (isPalindrome("level") ? "true" : "false") << '\n';
+    std::cout << "5.7 palindrome: ";
+    if (isPalindrome("level"))
+        std::cout << "true";
+    else
+        std::cout << "false";
+    std::cout << '\n';
 }
 
 // 5.8 Dequeue All Elements in Reverse Order

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<style>.title{font:700 30px Arial;fill:#000}.function{font:700 22px Arial;fill:#000}.body{font:20px Consolas,monospace;fill:#000}.node{font:700 20px Arial;fill:#000}.small{font:16px Arial;fill:#000}.section{font:700 18px Arial;fill:#000}</style>
+<rect width="1200" height="700" fill="#ffffff"/>
+<text x="40" y="45" class="title">Lab 6.2 - Problem 1.5</text>
+<text x="40" y="80" class="function">Function: Insert After a Given Node</text>
+<line x1="40" y1="105" x2="1160" y2="105" stroke="#000000" stroke-width="3"/>
+<rect x="160" y="230" width="150" height="68" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<line x1="260" y1="230" x2="260" y2="298" stroke="#000000" stroke-width="2"/>
+<text x="180" y="273" class="node">10</text>
+<circle cx="285" cy="264" r="7" fill="#000000"/>
+<line x1="310" y1="264" x2="365" y2="264" stroke="#000000" stroke-width="3"/>
+<polygon points="365,264 353,257 353,271" fill="#000000"/>
+<rect x="350" y="230" width="150" height="68" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<line x1="450" y1="230" x2="450" y2="298" stroke="#000000" stroke-width="2"/>
+<text x="370" y="273" class="node">30</text>
+<circle cx="475" cy="264" r="7" fill="#000000"/>
+<line x1="295" y1="264" x2="350" y2="264" stroke="#000000" stroke-width="3"/>
+<polygon points="350,264 362,257 362,271" fill="#000000"/>
+<line x1="500" y1="264" x2="555" y2="264" stroke="#000000" stroke-width="3"/>
+<polygon points="555,264 543,257 543,271" fill="#000000"/>
+<rect x="540" y="230" width="150" height="68" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<line x1="640" y1="230" x2="640" y2="298" stroke="#000000" stroke-width="2"/>
+<text x="560" y="273" class="node">10</text>
+<circle cx="665" cy="264" r="7" fill="#000000"/>
+<line x1="485" y1="264" x2="540" y2="264" stroke="#000000" stroke-width="3"/>
+<polygon points="540,264 552,257 552,271" fill="#000000"/>
+<text x="40" y="195" class="small"></text>
+<text x="40" y="217" class="small">&lt;-&gt; doubly linked pointers</text>
+<text x="40" y="125" class="node">OPERATION: insertAfter(10,20).</text>
+<line x1="40" y1="360" x2="1160" y2="360" stroke="#000000" stroke-width="2"/>
+<rect x="40" y="390" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="58" y="422" class="section">BEFORE</text>
+<text x="58" y="452" class="small">10&lt;-&gt;30, given node=10.</text>
+<rect x="620" y="390" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="638" y="422" class="section">OUTPUT</text>
+<text x="638" y="452" class="small">10&lt;-&gt;20&lt;-&gt;30.</text>
+<rect x="40" y="530" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="58" y="562" class="section">BIG-O ANALYSIS</text>
+<text x="58" y="592" class="small">O(1)/O(1).</text>
+<rect x="620" y="530" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="638" y="562" class="section">EDGE CASES</text>
+<text x="638" y="592" class="small">null given node is ignored; inserting after the tail</text>
+<text x="638" y="615" class="small">leaves next=NULL.</text>
+</svg>

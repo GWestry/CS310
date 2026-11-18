@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<style>.title{font:700 30px Arial;fill:#000}.function{font:700 22px Arial;fill:#000}.body{font:20px Consolas,monospace;fill:#000}.node{font:700 20px Arial;fill:#000}.small{font:16px Arial;fill:#000}.section{font:700 18px Arial;fill:#000}</style>
+<rect width="1200" height="700" fill="#ffffff"/>
+<text x="40" y="45" class="title">Lab 6.2 - Problem 3.1</text>
+<text x="40" y="80" class="function">Function: Implement push and 3.2 Implement pop</text>
+<line x1="40" y1="105" x2="1160" y2="105" stroke="#000000" stroke-width="3"/>
+<rect x="300" y="250" width="82" height="58" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="325.0" y="288" class="body">-1</text>
+<text x="333.0" y="332" class="small">[0]</text>
+<text x="40" y="125" class="node">OPERATION: push(10), push(20).</text>
+<line x1="40" y1="360" x2="1160" y2="360" stroke="#000000" stroke-width="2"/>
+<rect x="40" y="390" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="58" y="422" class="section">BEFORE</text>
+<text x="58" y="452" class="small">top=-1, [_,_,_,_].</text>
+<rect x="620" y="390" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="638" y="422" class="section">OUTPUT</text>
+<text x="638" y="452" class="small">top=1, [10,20,_,_].</text>
+<rect x="40" y="530" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="58" y="562" class="section">BIG-O ANALYSIS</text>
+<text x="58" y="592" class="small">O(1)/O(1).</text>
+<rect x="620" y="530" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="638" y="562" class="section">EDGE CASES</text>
+<text x="638" y="592" class="small">full array rejects push; capacity boundary is top=MAX-1.</text>
+</svg>

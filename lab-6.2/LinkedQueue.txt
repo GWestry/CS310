@@ -97,7 +97,9 @@ public:
 
     int getFront() const
     {
-        return front == nullptr ? -1 : front->val;
+        if (front == nullptr)
+            return -1;
+        return front->val;
     }
 
     bool isEmpty() const

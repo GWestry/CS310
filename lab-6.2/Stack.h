@@ -60,7 +60,10 @@ void nextGreater(int arr[], int n, int out[])
         while (!values.isEmpty() && values.peek() <= arr[i])
             values.pop();
 
-        out[i] = values.isEmpty() ? -1 : values.peek();
+        if (values.isEmpty())
+            out[i] = -1;
+        else
+            out[i] = values.peek();
         values.push(arr[i]);
     }
 }
@@ -221,7 +224,10 @@ void stockSpan(int price[], int n, int span[])
         while (!indices.isEmpty() && price[indices.peek()] <= price[i])
             indices.pop();
 
-        span[i] = indices.isEmpty() ? i + 1 : i - indices.peek();
+        if (indices.isEmpty())
+            span[i] = i + 1;
+        else
+            span[i] = i - indices.peek();
         indices.push(i);
     }
 }

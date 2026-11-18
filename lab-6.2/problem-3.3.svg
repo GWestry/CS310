@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<style>.title{font:700 30px Arial;fill:#000}.function{font:700 22px Arial;fill:#000}.body{font:20px Consolas,monospace;fill:#000}.node{font:700 20px Arial;fill:#000}.small{font:16px Arial;fill:#000}.section{font:700 18px Arial;fill:#000}</style>
+<rect width="1200" height="700" fill="#ffffff"/>
+<text x="40" y="45" class="title">Lab 6.2 - Problem 3.3</text>
+<text x="40" y="80" class="function">Function: Next Greater Element</text>
+<line x1="40" y1="105" x2="1160" y2="105" stroke="#000000" stroke-width="3"/>
+<rect x="300" y="250" width="82" height="58" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="325.0" y="288" class="body">4</text>
+<text x="333.0" y="332" class="small">[0]</text>
+<rect x="382" y="250" width="82" height="58" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="407.0" y="288" class="body">5</text>
+<text x="415.0" y="332" class="small">[1]</text>
+<rect x="464" y="250" width="82" height="58" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="489.0" y="288" class="body">2</text>
+<text x="497.0" y="332" class="small">[2]</text>
+<rect x="546" y="250" width="82" height="58" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="571.0" y="288" class="body">10</text>
+<text x="579.0" y="332" class="small">[3]</text>
+<rect x="628" y="250" width="82" height="58" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="653.0" y="288" class="body">8</text>
+<text x="661.0" y="332" class="small">[4]</text>
+<text x="40" y="125" class="node">OPERATION:</text>
+<line x1="40" y1="360" x2="1160" y2="360" stroke="#000000" stroke-width="2"/>
+<rect x="40" y="390" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="58" y="422" class="section">BEFORE</text>
+<text x="58" y="452" class="small">input [4,5,2,10,8], scan right to left.</text>
+<rect x="620" y="390" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="638" y="422" class="section">OUTPUT</text>
+<text x="638" y="452" class="small">output [5,10,10,-1,-1].</text>
+<rect x="40" y="530" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="58" y="562" class="section">BIG-O ANALYSIS</text>
+<text x="58" y="592" class="small">O(n)/O(n).</text>
+<rect x="620" y="530" width="540" height="120" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+<text x="638" y="562" class="section">EDGE CASES</text>
+<text x="638" y="592" class="small">last element has no greater value; stack removes smaller</text>
+<text x="638" y="615" class="small">candidates.</text>
+</svg>
