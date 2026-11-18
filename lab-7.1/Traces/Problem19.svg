@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="360"><text x="20" y="30" font-size="22">Problem 19 - reverse stack</text><text x="20" y="70">Stack top: 3,2,1</text><text x="20" y="120">Stack: reverse(3) | reverse(2) | reverse(1) | base</text><text x="20" y="170">Values are restored in opposite order</text><text x="20" y="230">Result top-to-bottom: 1,2,3</text></svg>

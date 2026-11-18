@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="360"><text x="20" y="30" font-size="22">Problem 10 - pair sum</text><text x="20" y="70">Heap: 1 -&gt; 4 -&gt; 6 -&gt; 9, target 10</text><text x="20" y="120">Stack: pair(1) | scan(4,6,9) | pair(4) | scan(6)</text><text x="20" y="170">Pair 4 + 6 is found</text><text x="20" y="230">Result: true</text></svg>

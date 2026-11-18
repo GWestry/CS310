@@ -1,0 +1,209 @@
+RECURSIVE ADT PRACTICE LAB
+Submission requirements and hand-drawing guide
+
+============================================================
+PART 1 - REQUIRED FILES
+============================================================
+
+Submit every source file individually through Canvas. Do not submit a zip
+file unless the instructor separately requests one.
+
+Required source files:
+  Problem01.cpp through Problem30.cpp
+  RecursiveADT.h
+
+Required written work:
+  Reflections.pdf (or Reflections.docx)
+  ComplexityTable.md may be converted to PDF or included with the report
+
+Required drawings:
+  One stack/heap trace for every problem.
+  You may hand-draw the traces and scan them as images, or combine them into
+  one PDF. The Traces folder contains readable examples to use as guides.
+
+Recommended file names:
+  Problem01.cpp
+  Problem01_Trace.jpg
+  Problem02.cpp
+  Problem02_Trace.jpg
+  ...
+  Reflections.pdf
+
+============================================================
+PART 2 - REQUIREMENTS FOR EVERY PROBLEM
+============================================================
+
+For EACH of the 30 problems, include all four items:
+
+1. CODE
+   - A separate .cpp file.
+   - A recursive implementation of the requested operation.
+   - A main() function with a small sample input and visible output.
+   - Base cases for empty, one-node, and other relevant edge cases.
+
+2. COMPLEXITY COMMENT
+   - State recursive time complexity.
+   - State recursive auxiliary space complexity, including call-stack frames.
+   - Compare with an iterative approach when one is reasonable.
+   - Mention a worst case when the operation has different cases.
+
+3. STACK/HEAP DRAWING
+   - Use a small input, usually 3-5 elements.
+   - Draw at least four recursive stack frames when the input permits it.
+   - Label each frame with the function name and important parameters.
+   - Draw heap nodes, values, and pointers.
+   - Show pointer/link changes during unwinding.
+   - Show the final heap/ADT state.
+   - Label the base case and the final returned value when applicable.
+
+4. REFLECTION PARAGRAPH
+   - Explain the recursive idea in your own words.
+   - Identify the base case.
+   - Describe the main edge case or invariant.
+   - State one benefit and one drawback of recursion for this operation.
+
+============================================================
+PART 3 - THE 30 REQUIRED OPERATIONS
+============================================================
+
+SINGLY LINKED LIST
+
+Problem 01 - Reverse a linked list recursively.
+  Draw: call frames for each node; next pointers reversing on unwind.
+
+Problem 02 - Find the middle node recursively.
+  Draw: slow and fast pointer positions for each frame.
+
+Problem 03 - Detect a cycle recursively without extra space.
+  Draw: slow and fast pointers until they meet or reach null.
+
+Problem 04 - Merge two sorted linked lists recursively.
+  Draw: both input lists and the selected node at each frame.
+
+Problem 05 - Remove duplicates from an unsorted list recursively.
+  Draw: comparison/scan pointer and nodes removed from the heap.
+
+Problem 06 - Partition a list around a value x recursively.
+  Draw: low and high sublists and each node's destination.
+
+DOUBLY LINKED LIST
+
+Problem 07 - Reverse a doubly linked list recursively.
+  Draw: both next and prev pointers before and after reversal.
+
+Problem 08 - Insert into a sorted doubly linked list recursively.
+  Draw: insertion point and repaired next/prev links.
+
+Problem 09 - Delete a node by value recursively.
+  Draw: search frames and predecessor/successor link repair.
+
+Problem 10 - Find a pair whose values sum to a target recursively.
+  Draw: outer-node frame and inner scan state.
+
+Problem 11 - Flatten a multilevel doubly linked list recursively.
+  Draw: next/child links and the traversal order.
+
+Problem 12 - Rotate a doubly linked list by k positions recursively.
+  Draw: split point, detached section, and reconnected list.
+
+CIRCULAR LINKED LIST
+
+Problem 13 - Detect the cycle length recursively.
+  Draw: the return-to-head stopping condition and count.
+
+Problem 14 - Insert into a sorted circular list recursively.
+  Draw: the circular tail-to-head link and insertion point.
+
+Problem 15 - Delete a node without a head pointer recursively.
+  Draw: current node, successor, bypass link, and deletion.
+
+Problem 16 - Split one circular list into two circular lists recursively.
+  Draw: midpoint and the two newly closed circular links.
+
+Problem 17 - Solve the Josephus problem recursively.
+  Draw: the reduced n-element problem and survivor index during unwind.
+
+STACK
+
+Problem 18 - Sort a stack recursively.
+  Draw: stack contents, popped values, and sorted insertion frames.
+
+Problem 19 - Reverse a stack recursively.
+  Draw: pop frames and the stack state during restoration.
+
+Problem 20 - Evaluate a postfix expression recursively using a stack.
+  Draw: expression position, operands, operators, and stack contents.
+
+Problem 21 - Check balanced parentheses recursively.
+  Draw: input index and stack of opening delimiters.
+
+QUEUE
+
+Problem 22 - Reverse a queue recursively.
+  Draw: front removal on descent and rear insertion on unwind.
+
+Problem 23 - Implement queue insertion using recursion and no loops.
+  Draw: each recursive enqueue call and queue state.
+
+Problem 24 - Interleave the two halves of a queue recursively.
+  Draw: first half, second half, and the interleaving order.
+
+Problem 25 - Generate binary numbers up to n using queue recursion.
+  Draw: recursive generation frames and enqueue order.
+
+SORTED LINKED LIST
+
+Problem 26 - Binary search on a sorted linked list recursively.
+  Draw: current range, midpoint traversal, and chosen half.
+  Note: linked-list midpoint lookup makes this slower than array binary search.
+
+Problem 27 - Quicksort on a linked list recursively.
+  Draw: pivot, less/equal/greater lists, recursive calls, and concatenation.
+
+Problem 28 - Merge sort on a linked list recursively.
+  Draw: split frames and merge frames.
+
+Problem 29 - Heap sort/build heap recursively.
+  Draw: array heap, parent/child comparisons, swaps, and heapify frames.
+
+Problem 30 - Insertion sort recursively while maintaining sorted order.
+  Draw: sorted prefix, inserted value, and shifts during unwind.
+
+============================================================
+PART 4 - REFLECTION DOCUMENT CONTENT
+============================================================
+
+Your Reflections.pdf or Reflections.docx must answer these five challenge
+questions:
+
+1. Why does recursion suit tree-like structures but add overhead to linear
+   structures such as lists? Discuss stack-overflow risks.
+
+2. Compare tail-recursion optimization in compilers for lists versus
+   stacks/queues.
+
+3. How do cycles in circular lists affect recursion? Propose safeguards.
+
+4. For sorting, when is recursion, such as quicksort, preferable to
+   iteration?
+
+5. Which problem was hardest? How did stack/heap drawings help debug it?
+
+Also include a short reflection for each problem or problem group describing
+the idea, base case, invariant, complexity, and recursion trade-off.
+
+============================================================
+PART 5 - FINAL UPLOAD CHECK
+============================================================
+
+[ ] Problem01.cpp through Problem30.cpp are present and individually named.
+[ ] RecursiveADT.h is included if required by the instructor.
+[ ] Every source has main(), sample output, and complexity comments.
+[ ] Every source has a matching hand-drawn stack/heap trace.
+[ ] Every trace has at least four labeled frames where possible.
+[ ] Every trace shows heap/ADT state and final result.
+[ ] Reflection answers all five challenge questions.
+[ ] Reflection includes problem/group reflections.
+[ ] Reflection is exported as PDF or Word.
+[ ] Drawings are scanned as readable JPG/PNG files or a readable PDF.
+[ ] Files use clear names and open correctly before uploading.

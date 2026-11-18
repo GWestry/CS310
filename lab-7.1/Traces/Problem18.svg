@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="360"><text x="20" y="30" font-size="22">Problem 18 - sort stack</text><text x="20" y="70">Stack top: 2,4,1,3</text><text x="20" y="120">Stack: sort(3) | sort(1) | sort(4) | sort(2)</text><text x="20" y="170">Sorted insertion happens during unwind</text><text x="20" y="230">Result top-to-bottom: 1,2,3,4</text></svg>

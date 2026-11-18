@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.16)
+project(RecursiveADTs LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+file(GLOB PROBLEM_SOURCES CONFIGURE_DEPENDS "Problem*.cpp")
+foreach(source ${PROBLEM_SOURCES})
+    get_filename_component(name ${source} NAME_WE)
+    add_executable(${name} ${source})
+endforeach()

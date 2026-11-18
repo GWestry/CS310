@@ -1,0 +1,197 @@
+COMPLEXITY ANALYSIS BY PROBLEM
+
+Notation:
+  n = number of nodes/elements in the input.
+  m = number of nodes in the second input list.
+  Auxiliary space includes recursive call-stack frames and temporary
+  containers created by the algorithm, but not the input structure itself.
+
+01. Reverse a singly linked list
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n), because there is one frame per node.
+    Iterative comparison: O(n) time and O(1) auxiliary space.
+    Reason: every node is visited once and its next pointer is changed once.
+
+02. Find the middle node
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative slow/fast comparison: O(n) time and O(1) auxiliary space.
+    Reason: slow advances one node and fast advances two nodes per frame.
+
+03. Detect a cycle
+    Recursive time: O(n) until the pointers meet or fast reaches null.
+    Recursive auxiliary space: O(n).
+    Iterative Floyd comparison: O(n) time and O(1) auxiliary space.
+    Reason: each recursive frame advances slow once and fast twice.
+
+04. Merge two sorted linked lists
+    Recursive time: O(n + m).
+    Recursive auxiliary space: O(n + m).
+    Iterative comparison: O(n + m) time and O(1) auxiliary space.
+    Reason: one node is selected and removed from consideration per frame.
+
+05. Remove duplicates from an unsorted list
+    Recursive time: O(n^2).
+    Recursive auxiliary space: O(n).
+    Iterative nested-scan comparison: O(n^2) time and O(1) auxiliary space.
+    Reason: each node scans the remaining list to remove equal values.
+
+06. Partition a list around x
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative comparison: O(n) time and O(1) auxiliary space.
+    Reason: each node is visited once and linked into one of two chains.
+
+07. Reverse a doubly linked list
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative comparison: O(n) time and O(1) auxiliary space.
+    Reason: each node swaps its next and previous pointers once.
+
+08. Insert into a sorted doubly linked list
+    Recursive time: O(n) worst case.
+    Recursive auxiliary space: O(n) worst case.
+    Iterative comparison: O(n) time and O(1) auxiliary space.
+    Reason: the insertion position may be at the end after visiting all nodes.
+
+09. Delete a doubly linked-list node by value
+    Recursive time: O(n) worst case.
+    Recursive auxiliary space: O(n) worst case.
+    Iterative comparison: O(n) time and O(1) auxiliary space.
+    Reason: the list may be searched to the final node before deletion.
+
+10. Find a pair with a target sum
+    Recursive time: O(n^2).
+    Recursive auxiliary space: O(n).
+    Iterative nested-loop comparison: O(n^2) time and O(1) auxiliary space.
+    Reason: each outer node can scan every later node.
+
+11. Flatten a multilevel doubly linked list
+    Recursive time: O(n), where n counts all reachable nodes.
+    Recursive auxiliary space: O(n) worst case for nested child chains.
+    Iterative explicit-stack comparison: O(n) time and O(n) auxiliary space.
+    Reason: each node is output once and each child/next link is followed.
+
+12. Rotate a doubly linked list by k positions
+    Recursive traversal time: O(n).
+    Recursive auxiliary space: O(n) if traversal is recursive.
+    Iterative split/reconnect comparison: O(n) time and O(1) auxiliary space.
+    Reason: finding the split and tail requires at most one list traversal.
+
+13. Find the length of a circular-list cycle
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative counted traversal: O(n) time and O(1) auxiliary space.
+    Reason: traversal stops when the cursor returns to the original head.
+
+14. Insert into a sorted circular linked list
+    Recursive time: O(n) worst case.
+    Recursive auxiliary space: O(n) worst case.
+    Iterative comparison: O(n) time and O(1) auxiliary space.
+    Reason: the insertion point may require a complete circular traversal.
+
+15. Delete a node without a head pointer
+    Time: O(1) when a valid node with a successor is supplied.
+    Auxiliary space: O(1); this implementation uses no recursive traversal.
+    Iterative comparison: also O(1).
+    Reason: the node copies/bypasses its successor locally. The final node
+    cannot be deleted with this technique because it has no successor.
+
+16. Split a circular list into two circular lists
+    Time: O(n).
+    Auxiliary space: O(1) for the pointer rearrangement used here.
+    Recursive traversal alternative: O(n) time and O(n) stack space.
+    Reason: the midpoint and each circular tail are found by traversal.
+
+17. Josephus problem
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative recurrence comparison: O(n) time and O(1) auxiliary space.
+    Reason: the recurrence makes one smaller problem per call.
+
+18. Sort a stack recursively
+    Recursive time: O(n^2).
+    Recursive auxiliary space: O(n), in addition to the stack's contents.
+    Iterative comparison: commonly O(n^2) time; extra space depends on the
+    chosen stack-based sorting method.
+    Reason: inserting one popped value can scan through O(n) values.
+
+19. Reverse a stack recursively
+    Recursive time: O(n^2) for the temporary-stack restoration used here.
+    Recursive auxiliary space: O(n).
+    Iterative comparison: O(n) time with an auxiliary stack or array, which
+    uses O(n) auxiliary space.
+    Reason: the implementation repeatedly moves the remaining stack values.
+
+20. Evaluate a postfix expression recursively
+    Recursive time: O(n), where n is the expression length.
+    Recursive auxiliary space: O(n) worst case for calls and operands.
+    Iterative stack comparison: O(n) time and O(n) operand-stack space.
+    Reason: each token is processed once and each operator combines operands.
+
+21. Check balanced parentheses recursively
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n) for recursion and delimiter state.
+    Iterative comparison: O(n) time and O(n) delimiter-stack space.
+    Reason: each character is examined once and each opener is pushed/popped.
+
+22. Reverse a queue recursively
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative stack comparison: O(n) time and O(n) auxiliary space.
+    Reason: every item is removed during descent and reinserted on unwind.
+
+23. Enqueue using recursion with no loops
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n).
+    Iterative enqueue-loop comparison: O(n) time and O(1) auxiliary space.
+    Reason: there is one call and one enqueue for every input value.
+
+24. Interleave two queue halves
+    Recursive time: O(n).
+    Recursive auxiliary space: O(n) for saved values and call frames.
+    Iterative comparison: O(n) time and O(n) auxiliary space when a temporary
+    array/queue is used.
+    Reason: each item is collected once and then restored in alternating order.
+
+25. Generate binary numbers through queue recursion
+    Recursive time: O(n) for the n generated values in this implementation.
+    Recursive auxiliary space: O(n) for output and call frames.
+    Iterative comparison: O(n) generation time, O(n) output space, O(1) stack.
+    Reason: one recursive call generates each successive requested value.
+
+26. Binary search on a sorted linked list
+    Recursive time: O(n log n) for repeated midpoint traversal in this code.
+    Recursive auxiliary space: O(log n) search frames; midpoint traversal is
+    iterative, so it does not add recursive frames.
+    Iterative comparison: linked midpoint searches are O(n log n) in this
+    approach and O(1) auxiliary space; array binary search is O(log n).
+    Reason: linked lists do not support O(1) random access to the midpoint.
+
+27. Quicksort on a linked list
+    Average recursive time: O(n log n).
+    Worst-case recursive time: O(n^2), such as repeatedly poor pivots.
+    Recursive auxiliary space: O(n) worst case; average call depth O(log n).
+    Iterative comparison: merge sort gives predictable O(n log n) time.
+    Reason: partitioning is linear per level and the number of levels varies.
+
+28. Merge sort on a linked list
+    Recursive time: O(n log n).
+    Recursive auxiliary space: O(log n) call-stack frames in this version.
+    Iterative bottom-up comparison: O(n log n) time and O(1) extra space when
+    links are rearranged in place.
+    Reason: the list is split into log n levels and merged at each level.
+
+29. Build a heap and heap sort recursively
+    Build-heap time: O(n).
+    Full heap-sort time: O(n log n).
+    Recursive auxiliary space: O(log n) for the deepest heapify calls.
+    Iterative comparison: O(n log n) time and O(1) auxiliary stack space.
+    Reason: heapify has O(log n) depth, while bottom-up construction is O(n).
+
+30. Recursive insertion sort
+    Worst/average recursive time: O(n^2).
+    Best-case time: O(n) when the input is already sorted.
+    Recursive auxiliary space: O(n) call-stack frames.
+    Iterative comparison: same time bounds and O(1) auxiliary space.
+    Reason: each new value may shift across the entire sorted prefix.

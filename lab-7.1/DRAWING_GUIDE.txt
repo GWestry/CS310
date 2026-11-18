@@ -1,0 +1,280 @@
+HAND-DRAWN TRACE TEXT
+
+Draw each problem on its own page. Copy the following exactly. On every page,
+draw two boxes labeled STACK and HEAP/ADT. Under the boxes write:
+BASE CASE:
+UNWIND:
+FINAL:
+COMPLEXITY:
+
+Use -> for next, <-> for next/prev, and -> HEAD for a circular link.
+
+01
+INPUT: 1->2->3->4
+STACK: reverse(1) -> reverse(2) -> reverse(3) -> reverse(4)
+HEAP: 1->2->3->4->NULL
+BASE CASE: reverse(4) returns 4.
+UNWIND: 4->3; 3->2; 2->1; 1->NULL.
+FINAL: 4->3->2->1->NULL
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+02
+INPUT: 1->2->3->4->5
+STACK: middle(slow=1,fast=1) -> (2,3) -> (3,5) -> base
+HEAP: 1->2->3->4->5
+BASE CASE: fast is NULL or fast->next is NULL.
+UNWIND: slow stops at node 3.
+FINAL: middle = 3
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+03
+INPUT: 1->2->3->2 (cycle)
+STACK: cycle(slow=1,fast=2) -> (2,1) -> (3,3)
+HEAP: 1->2->3->2
+BASE CASE: fast is NULL means false; slow == fast means true.
+UNWIND: slow and fast meet at node 3.
+FINAL: cycle found = true
+COMPLEXITY: Time O(n), space O(n). Floyd iteration space O(1).
+
+04
+INPUT: A=1->3->5, B=2->4->6
+STACK: merge(1,2) -> merge(3,2) -> merge(3,4) -> merge(5,4)
+HEAP: two sorted lists A and B
+BASE CASE: one list is NULL; return the other list.
+UNWIND: choose 1, then 2, then 3, then 4, then 5, then 6.
+FINAL: 1->2->3->4->5->6
+COMPLEXITY: Time O(n+m), space O(n+m). Iterative space O(1).
+
+05
+INPUT: 1->2->1->3->2
+STACK: dedupe(1) -> remove(1) -> dedupe(2) -> remove(2)
+HEAP: 1->2->1->3->2
+BASE CASE: current node is NULL.
+UNWIND: delete duplicate 1; delete duplicate 2.
+FINAL: 1->2->3
+COMPLEXITY: Time O(n^2), space O(n). Iterative space O(1).
+
+06
+INPUT: 3->5->1->4->2, x=3
+STACK: partition(3) -> partition(5) -> partition(1) -> partition(4)
+HEAP: original list; LOW=NULL; HIGH=NULL
+BASE CASE: current node is NULL.
+UNWIND: LOW gets 1, then 2; HIGH gets 3, then 5, then 4.
+FINAL: LOW=2->1; HIGH=4->5->3.
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+07
+INPUT: 1<->2<->3<->4
+STACK: reverse(1) -> reverse(2) -> reverse(3) -> reverse(4)
+HEAP: 1<->2<->3<->4
+BASE CASE: current node is NULL.
+UNWIND: swap next and prev at every node.
+FINAL: 4<->3<->2<->1
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+08
+INPUT: 1<->3<->5; insert 4
+STACK: insert(1) -> insert(3) -> insert(5) -> base
+HEAP: 1<->3<->5
+BASE CASE: current is NULL or 4 belongs before current.
+UNWIND: connect 3<->4<->5; repair both directions.
+FINAL: 1<->3<->4<->5
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+09
+INPUT: 1<->2<->3; delete 2
+STACK: erase(1) -> erase(2) -> found
+HEAP: 1<->2<->3
+BASE CASE: current is NULL or current value is 2.
+UNWIND: connect node 1 directly to node 3.
+FINAL: 1<->3
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+10
+INPUT: values 1,4,6,9; target=10
+STACK: pair(1) -> scan(4,6,9) -> pair(4) -> scan(6)
+HEAP: 1->4->6->9
+BASE CASE: no outer node or no remaining scan nodes.
+UNWIND: 4+6=10 returns true.
+FINAL: pair found = true
+COMPLEXITY: Time O(n^2), space O(n). Iterative space O(1).
+
+11
+INPUT: node 1 has child 3 and next 2
+STACK: flatten(1) -> flatten(child=3) -> return -> flatten(next=2)
+HEAP: 1 child->3; 1 next->2
+BASE CASE: current node is NULL.
+UNWIND: visit child before next sibling.
+FINAL: 1->3->2
+COMPLEXITY: Time O(n), space O(n). Iterative stack space O(n).
+
+12
+INPUT: 1<->2<->3<->4; k=2
+STACK: rotate(head=1,k=2) -> locate node 3 -> reconnect
+HEAP: 1<->2<->3<->4
+BASE CASE: list is NULL or k is zero.
+UNWIND: cut before 3; attach 1,2 after 4.
+FINAL: 3<->4<->1<->2
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+13
+INPUT: 1->2->3->4->HEAD
+STACK: count(1,0) -> count(2,1) -> count(3,2) -> count(4,3)
+HEAP: circular list 1->2->3->4->HEAD
+BASE CASE: cursor returns to HEAD.
+UNWIND: counts become 1,2,3,4.
+FINAL: cycle length = 4
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+14
+INPUT: 1->3->HEAD; insert 2
+STACK: insert(1) -> insert(3) -> insertion point
+HEAP: 1->3->HEAD
+BASE CASE: empty list or next value is >= 2.
+UNWIND: link 1->2->3; keep 3->HEAD.
+FINAL: 1->2->3->HEAD
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+15
+INPUT: 1->2->3->HEAD; given node 1
+STACK: deleteAfter(1)
+HEAP: 1->2->3->HEAD
+BASE CASE: node or successor is NULL.
+UNWIND: set 1->next to 3; delete node 2.
+FINAL: 1->3->HEAD
+COMPLEXITY: Time O(1), space O(1). Same iteratively.
+
+16
+INPUT: 1->2->3->4->HEAD
+STACK: split(1,4) -> find midpoint -> close rings
+HEAP: one circular list
+BASE CASE: empty list or one node.
+UNWIND: close first ring 1->2->1; close second ring 3->4->3.
+FINAL: first=1->2->HEAD; second=3->4->HEAD
+COMPLEXITY: Time O(n), space O(1). Recursive traversal space O(n).
+
+17
+INPUT: n=7, k=3
+STACK: josephus(7) -> josephus(6) -> josephus(5) -> josephus(4)
+HEAP/ADT: positions 1 2 3 4 5 6 7
+BASE CASE: josephus(1)=0.
+UNWIND: survivor indexes are remapped by (old+k) mod n.
+FINAL: survivor = position 4
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+18
+INPUT: stack TOP=2,4,1,3
+STACK: sort(3) -> sort(1) -> sort(4) -> sort(2)
+HEAP/ADT: TOP | 2 | 4 | 1 | 3
+BASE CASE: empty stack.
+UNWIND: insert each popped value into sorted position.
+FINAL: TOP=1,2,3,4
+COMPLEXITY: Time O(n^2), space O(n).
+
+19
+INPUT: stack TOP=3,2,1
+STACK: reverse(3) -> reverse(2) -> reverse(1) -> base
+HEAP/ADT: TOP | 3 | 2 | 1
+BASE CASE: empty stack.
+UNWIND: restore values in reverse order.
+FINAL: TOP=1,2,3
+COMPLEXITY: Time O(n^2), space O(n).
+
+20
+INPUT: postfix expression + 3 * 4 2
+STACK: eval(+) -> eval(3) -> eval(*) -> eval(4)
+HEAP/ADT: expression tokens
+BASE CASE: token is a number.
+UNWIND: compute 4*2=8; compute 3+8=11.
+FINAL: result = 11
+COMPLEXITY: Time O(n), space O(n).
+
+21
+INPUT: ({[]})
+STACK: index 0 depth 1 -> index 1 depth 2 -> index 2 depth 3 -> unwind
+HEAP/ADT: delimiter stack grows (, (, [, { and then empties.
+BASE CASE: end of string; stack must be empty.
+UNWIND: remove }, ], ), } in matching order.
+FINAL: balanced = true
+COMPLEXITY: Time O(n), space O(n).
+
+22
+INPUT: queue FRONT=1,2,3,4 REAR
+STACK: reverse(1) -> reverse(2) -> reverse(3) -> reverse(4)
+HEAP/ADT: FRONT | 1 | 2 | 3 | 4 | REAR
+BASE CASE: queue is empty.
+UNWIND: enqueue each removed value at the rear.
+FINAL: FRONT=4,3,2,1 REAR
+COMPLEXITY: Time O(n), space O(n).
+
+23
+INPUT: values 1,2,3,4
+STACK: enqueue(1) -> enqueue(2) -> enqueue(3) -> enqueue(4)
+HEAP/ADT: queue starts empty.
+BASE CASE: input index equals input length.
+UNWIND: queue receives 1, then 2, then 3, then 4.
+FINAL: FRONT=1,2,3,4 REAR
+COMPLEXITY: Time O(n), space O(n). Iterative space O(1).
+
+24
+INPUT: queue FRONT=1,2,3,4 REAR
+STACK: collect(1) -> collect(2) -> collect(3) -> collect(4)
+HEAP/ADT: first half=1,2; second half=3,4.
+BASE CASE: all values collected.
+UNWIND: enqueue 1,3, then 2,4.
+FINAL: FRONT=1,3,2,4 REAR
+COMPLEXITY: Time O(n), space O(n).
+
+25
+INPUT: generate values through n=8
+STACK: binary(4) -> binary(3) -> binary(2) -> binary(1)
+HEAP/ADT: output starts empty.
+BASE CASE: n=0.
+UNWIND: append 1,2,3,4,5,6,7,8.
+FINAL: output=1,2,3,4,5,6,7,8
+COMPLEXITY: Time O(n), space O(n) including output.
+
+26
+INPUT: 1->2->3->4->5->6->7; target=6
+STACK: search(1..7), mid=4 -> search(5..7), mid=6 -> found
+HEAP: sorted linked list 1->2->3->4->5->6->7
+BASE CASE: range is empty or midpoint equals target.
+UNWIND: discard left half, then return true.
+FINAL: found = true
+COMPLEXITY: Time O(n log n), space O(log n) search frames.
+
+27
+INPUT: 3->1->4->2
+STACK: quick(3) -> quick(1) -> quick(4) -> base
+HEAP: list 3->1->4->2
+BASE CASE: list is empty or has one node.
+UNWIND: pivot 3; less=1,2; equal=3; greater=4; concatenate.
+FINAL: 1->2->3->4
+COMPLEXITY: Average O(n log n), worst O(n^2), space O(n).
+
+28
+INPUT: 4->1->3->2
+STACK: sort(4) -> sort(1) -> merge(4,1) -> merge(3,2)
+HEAP: list 4->1->3->2
+BASE CASE: list has zero or one node.
+UNWIND: split into halves; merge in order.
+FINAL: 1->2->3->4
+COMPLEXITY: Time O(n log n), space O(log n).
+
+29
+INPUT: array [3,1,4,2]
+STACK: build(1) -> heapify(1) -> heapify(0) -> swap
+HEAP/ADT: parent 3; children 1 and 4.
+BASE CASE: heapify index has no larger child.
+UNWIND: swap 3 and 4; extract maximum values.
+FINAL: sorted array [1,2,3,4]
+COMPLEXITY: Time O(n log n), space O(log n). Iterative space O(1).
+
+30
+INPUT: array [4,1,3,2]
+STACK: insertion(4) -> insertion(3) -> insertion(2) -> base
+HEAP/ADT: sorted prefix grows one element at a time.
+BASE CASE: prefix length is 1.
+UNWIND: insert 1 into [4]; insert 3; insert 2.
+FINAL: sorted array [1,2,3,4]
+COMPLEXITY: Time O(n^2), space O(n). Iterative space O(1).

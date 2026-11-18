@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="360"><text x="20" y="30" font-size="22">Problem 20 - postfix evaluation</text><text x="20" y="70">Expression: + 3 * 4 2</text><text x="20" y="120">Stack: eval(+) | eval(3) | eval(*) | eval(4)</text><text x="20" y="170">Unwind computes 4*2, then 3+8</text><text x="20" y="230">Result: 11</text></svg>

@@ -1,0 +1,150 @@
+COMPLEXITY ANALYSIS GUIDE
+
+For every problem, write these four parts:
+
+1. Recursive time: count how many nodes/elements each call processes.
+2. Recursive auxiliary space: count the deepest call-stack frames. Do not
+   count the input structure itself. Include temporary arrays/stacks if the
+   algorithm creates them.
+3. Iterative comparison: give time and extra-space complexity when a sensible
+   iterative version exists.
+4. Trade-off: explain why recursion is useful here and what it costs.
+
+Use the following analyses for this lab:
+
+01 Reverse singly list
+    Recursive: time O(n), auxiliary space O(n) call stack.
+    Iterative: time O(n), auxiliary space O(1).
+    Trade-off: recursive pointer reversal is clear; iteration avoids overflow.
+
+02 Find middle
+    Recursive: time O(n), auxiliary space O(n) frames.
+    Iterative slow/fast: time O(n), auxiliary space O(1).
+    Trade-off: both move through the list once.
+
+03 Detect cycle
+    Recursive: time O(n) until meeting/null, auxiliary space O(n).
+    Iterative Floyd: time O(n), auxiliary space O(1).
+    Trade-off: recursion needs an explicit null/meeting base case.
+
+04 Merge sorted lists
+    Recursive: time O(n+m), auxiliary space O(n+m).
+    Iterative merge: time O(n+m), auxiliary space O(1).
+
+05 Remove unsorted duplicates
+    Recursive: time O(n^2), auxiliary space O(n).
+    Iterative nested scan: time O(n^2), auxiliary space O(1).
+
+06 Partition list
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative partition: time O(n), auxiliary space O(1).
+
+07 Reverse doubly list
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative pointer swap: time O(n), auxiliary space O(1).
+
+08 Sorted DLL insertion
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative search and insert: time O(n), auxiliary space O(1).
+
+09 Delete DLL node by value
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative search/delete: time O(n), auxiliary space O(1).
+
+10 Pair sum
+    Recursive outer scan with inner scan: time O(n^2), auxiliary space O(n).
+    Iterative nested scan: time O(n^2), auxiliary space O(1).
+
+11 Flatten multilevel DLL
+    Recursive: time O(n), auxiliary space O(n) in the deepest traversal.
+    Iterative explicit stack: time O(n), auxiliary space O(n).
+
+12 Rotate DLL
+    Recursive traversal/search: time O(n), auxiliary space O(n).
+    Iterative split/reconnect: time O(n), auxiliary space O(1).
+
+13 Circular cycle length
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative counted traversal: time O(n), auxiliary space O(1).
+
+14 Sorted circular insertion
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative circular scan: time O(n), auxiliary space O(1).
+
+15 Delete node without head
+    Recursive: time O(1) for a known predecessor, auxiliary space O(1).
+    Iterative known-predecessor version: time O(1), auxiliary space O(1).
+
+16 Split circular list
+    Recursive/recursive-style traversal: time O(n), auxiliary space O(n)
+    when calls are used for traversal. Iterative split: O(n) time and O(1)
+    auxiliary space.
+
+17 Josephus
+    Recursive recurrence: time O(n), auxiliary space O(n).
+    Iterative recurrence: time O(n), auxiliary space O(1).
+
+18 Sort stack
+    Recursive: time O(n^2), auxiliary space O(n) call stack plus temporary
+    stack contents.
+    Iterative comparison sorting: commonly O(n^2) time; extra space varies.
+
+19 Reverse stack
+    Recursive: time O(n^2) for the temporary-stack restoration used here,
+    auxiliary space O(n).
+    With a recursive insert-at-bottom helper, time is also O(n^2).
+
+20 Evaluate postfix expression
+    Recursive: time O(n), auxiliary space O(n) for recursion and operands.
+    Iterative stack evaluator: time O(n), auxiliary space O(n) for operands.
+
+21 Balanced parentheses
+    Recursive: time O(n), auxiliary space O(n) for frames and delimiter state.
+    Iterative delimiter stack: time O(n), auxiliary space O(n).
+
+22 Reverse queue
+    Recursive: time O(n), auxiliary space O(n).
+    Iterative stack or deque: time O(n), auxiliary space O(n).
+
+23 Recursive enqueue
+    Recursive: time O(n), auxiliary space O(n) frames.
+    Iterative enqueue loop: time O(n), auxiliary space O(1).
+
+24 Interleave queue halves
+    Recursive: time O(n), auxiliary space O(n) for frames and saved values.
+    Iterative queue/temporary structure: time O(n), auxiliary space O(n).
+
+25 Generate binary numbers
+    Recursive: time O(n), auxiliary space O(n) output plus call stack.
+    Iterative generation: time O(n), auxiliary output space O(n), stack O(1).
+
+26 Binary search on linked list
+    Recursive: time O(n log n) in this midpoint-traversal approach, space
+    O(log n) search frames plus O(n) if counting the recursive midpoint helper.
+    Iterative linked search: midpoint traversal still makes total time O(n log n)
+    or O(n) with a slow/fast design; auxiliary space O(1).
+    Important: linked lists do not provide array-style O(log n) indexing.
+
+27 Linked-list quicksort
+    Average recursive: time O(n log n), space O(n).
+    Worst recursive: time O(n^2), space O(n).
+    Iterative/merge-sort alternative: O(n log n) predictable time.
+
+28 Linked-list merge sort
+    Recursive: time O(n log n), auxiliary space O(log n) split frames, with
+    O(n) total temporary storage only if values/nodes are copied.
+    Iterative bottom-up merge sort: time O(n log n), auxiliary space O(1)
+    when links are rearranged in place.
+
+29 Heap construction/heap sort
+    Recursive heapify: O(log n) per heapify; building the heap is O(n).
+    Full heap sort: O(n log n) time, O(log n) recursive stack space.
+    Iterative heapify: O(n log n) worst-case sort time and O(1) stack space.
+
+30 Recursive insertion sort
+    Recursive: time O(n^2) worst/average, O(n) best with the given shifting
+    strategy; auxiliary space O(n) frames.
+    Iterative insertion sort: same time bounds, auxiliary space O(1).
+
+Do not confuse input storage with auxiliary space. State explicitly whether
+your instructor wants the recursion stack only or all temporary storage.
